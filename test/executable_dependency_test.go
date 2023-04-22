@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gruntwork-io/terratest/modules/terraform"
-	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
+	"github.com/tnn-gruntwork-io/terratest/modules/terraform"
+	test_structure "github.com/tnn-gruntwork-io/terratest/modules/test-structure"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -23,7 +23,7 @@ func TestExecutableDependencyKubergrunt(t *testing.T) {
 		TerraformDir: terraformDir,
 		Vars: map[string]interface{}{
 			"executable":      "kubergrunt",
-			"download_url":    fmt.Sprintf("https://github.com/gruntwork-io/kubergrunt/releases/download/%s/kubergrunt", kubergrunt_version),
+			"download_url":    fmt.Sprintf("https://github.com/tnn-gruntwork-io/kubergrunt/releases/download/%s/kubergrunt", kubergrunt_version),
 			"executable_args": "--version",
 			"append_os_arch":  true,
 		},

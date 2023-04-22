@@ -3,10 +3,10 @@ package upgrades
 import (
 	"testing"
 
-	"github.com/gruntwork-io/module-ci/test/upgrades"
-	"github.com/gruntwork-io/terratest/modules/aws"
-	"github.com/gruntwork-io/terratest/modules/terraform"
-	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
+	"github.com/tnn-gruntwork-io/module-ci/test/upgrades"
+	"github.com/tnn-gruntwork-io/terratest/modules/aws"
+	"github.com/tnn-gruntwork-io/terratest/modules/terraform"
+	test_structure "github.com/tnn-gruntwork-io/terratest/modules/test-structure"
 )
 
 // The following lists are to keep track of which of the examples we've added upgrade tests for,

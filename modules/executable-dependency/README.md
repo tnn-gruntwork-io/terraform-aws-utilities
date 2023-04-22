@@ -2,8 +2,8 @@
 
 This is a module that can be used to check if an executable is already installed, and if it's not, download it from a
 URL. This is useful if your Terraform code has an external dependency and you want that dependency to be auto installed
-if it's not installed already: e.g., [terraform-aws-eks](https://github.com/gruntwork-io/terraform-aws-eks) expects the 
-[kubergrunt](https://github.com/gruntwork-io/kubergrunt) binary to be installed, and `executable-dependency` allows
+if it's not installed already: e.g., [terraform-aws-eks](https://github.com/tnn-gruntwork-io/terraform-aws-eks) expects the 
+[kubergrunt](https://github.com/tnn-gruntwork-io/kubergrunt) binary to be installed, and `executable-dependency` allows
 `terraform-aws-eks` to automatically download `kubergrunt` if it's not already available. 
 
 **NOTE**: This module requires that Python 3 is installed on your system.
@@ -21,14 +21,14 @@ See the [executable-dependency example](/examples/executable-dependency) for wor
 ## Usage
 
 Use the module in your Terraform code, replacing `<VERSION>` with the latest version from the [releases
-page](https://github.com/gruntwork-io/terraform-aws-utilities/releases):
+page](https://github.com/tnn-gruntwork-io/terraform-aws-utilities/releases):
 
 ```hcl
 module "path" {
-  source = "git::git@github.com:gruntwork-io/terraform-aws-utilities.git//modules/join-path?ref=<VERSION>"
+  source = "git::git@github.com:tnn-gruntwork-io/terraform-aws-utilities.git//modules/join-path?ref=<VERSION>"
   
   executable     = "kubergrunt"
-  download_url   = "https://github.com/gruntwork-io/kubergrunt/releases/download/v0.5.13/kubergrunt"
+  download_url   = "https://github.com/tnn-gruntwork-io/kubergrunt/releases/download/v0.5.13/kubergrunt"
   append_os_arch = true
 }
 ```

@@ -5,7 +5,7 @@ an executable is already installed, and if it's not, download it from a URL. Thi
 to prove that it was installed correctly. 
 
 The executable to run, the args to pass to it, and the download URL are all configurable in `variables.tf`. The default
-values show an example of ensuring the [kubergrunt](https://github.com/gruntwork-io/kubergrunt) executable is installed
+values show an example of ensuring the [kubergrunt](https://github.com/tnn-gruntwork-io/kubergrunt) executable is installed
 before running `kubergrunt --version`. 
 
 **NOTE**: This module requires that Python is installed on your system. It should work with Python 2 or 3.
