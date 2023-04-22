@@ -1,6 +1,6 @@
 # Changelog request-quota-increase
 
-## [v0.9.0](https://github.com/gruntwork-io/terraform-aws-utilities/releases/tag/v0.9.0) - 2022-06-21
+## [v0.9.0](https://github.com/tnn-gruntwork-io/terraform-aws-utilities/releases/tag/v0.9.0) - 2022-06-21
 
 ### Changed
 - Breaking changes
@@ -18,4 +18,4 @@ you may need to run `terraform init` with the `-upgrade` flag, which will allow 
 provider, as in `terraform init -upgrade`.
 
 ### Related Links
-- https://github.com/gruntwork-io/terraform-aws-utilities/pull/58
+- https://github.com/tnn-gruntwork-io/terraform-aws-utilities/pull/58

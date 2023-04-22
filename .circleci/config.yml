@@ -6,7 +6,7 @@ env: &env
     # The GOPRIVATE environment variable controls which modules the go command considers to be private
     # (not available publicly) and should therefore not use the proxy or checksum database.
     # Without this, tests fail with a "410 Gone" error
-    GOPRIVATE: github.com/gruntwork-io
+    GOPRIVATE: github.com/tnn-gruntwork-io
 defaults: &defaults
   docker:
     - image: 087285199408.dkr.ecr.us-east-1.amazonaws.com/circle-ci-test-image-base:go1.17-tf1.2-tg37.4-pck1.8-ci50.1
@@ -88,7 +88,7 @@ jobs:
             run-go-tests \
               --path ./test/upgrades \
               --timeout 1h \
-              --extra-flags "-ldflags '-X github.com/gruntwork-io/module-ci/test/upgrades.BaseRef=$UPGRADE_TEST_BASE_REF -X github.com/gruntwork-io/module-ci/test/upgrades.TFBaseVersion=$UPGRADE_TEST_TF_BASE_VERSION -X github.com/gruntwork-io/module-ci/test/upgrades.TFTargetVersion=$UPGRADE_TEST_TF_TARGET_VERSION'" \
+              --extra-flags "-ldflags '-X github.com/tnn-gruntwork-io/module-ci/test/upgrades.BaseRef=$UPGRADE_TEST_BASE_REF -X github.com/tnn-gruntwork-io/module-ci/test/upgrades.TFBaseVersion=$UPGRADE_TEST_TF_BASE_VERSION -X github.com/tnn-gruntwork-io/module-ci/test/upgrades.TFTargetVersion=$UPGRADE_TEST_TF_TARGET_VERSION'" \
               | (tee /tmp/logs/all.log || true)
           no_output_timeout: 3600s
       - store_results
